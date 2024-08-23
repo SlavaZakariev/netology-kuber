@@ -75,7 +75,7 @@
 
 ### Решение 1
 
-1. Устанавливаем `Microk8s`
+1. Устанавливаем `Microk8s`. Развёрнута ВМ Ubuntu 22.04 LTS на HyperV.
 
 ![M8s1](https://github.com/SlavaZakariev/netology-kuber/blob/cd8376c5b4f62ac73a3db41a095e5e0df2aef9f0/1.1/resources/kub_1.1.jpg)
 
