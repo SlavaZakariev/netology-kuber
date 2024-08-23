@@ -83,9 +83,47 @@
 
 ### Решение 1
 
-1. Устанавливаем Micro8s
+1. Устанавливаем `Microk8s`
 
-![m8s](https://github.com/SlavaZakariev/netology-kuber/blob/cd8376c5b4f62ac73a3db41a095e5e0df2aef9f0/1.1/resources/kub_1.1.jpg)
+![M8s1](https://github.com/SlavaZakariev/netology-kuber/blob/cd8376c5b4f62ac73a3db41a095e5e0df2aef9f0/1.1/resources/kub_1.1.jpg)
 
+2. Проверка статуса `Microk8s`
+
+![M8s2](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_1.2.jpg)
+
+3. Включение панели `dashboard`
+
+![dash](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_1.3.jpg)
+
+4. Добавление внешнего **IP** в файл конфигурации
+
+![ip](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_1.4.jpg)
+
+5. Обновление сертификатов
+
+![certs](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_1.5.jpg)
+
+
+---
 
 ### Решение 2
+
+1. Установка `kubectl`
+
+![ctl](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.1.jpg)
+
+2. `Token` для аутентификации в `dashboard`
+
+![token](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.2.jpg)
+
+3. Пробрасываем порт для возможности подключиться к `dashboard`
+
+![port](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.3.jpg)
+
+4. Подключение к `dashboard` через браузер и аутентификация с помощью полученного `token`
+
+![auth](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.4.jpg)
+
+5. Страница `about` в `dashboard`
+
+![about](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.5.jpg)
