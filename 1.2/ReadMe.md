@@ -50,7 +50,7 @@
 
 ### Решение 1
 
-1. Написан манифест `pod.hello-world.yml`
+1. Написан манифест [pod.hello-world.yml](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.2/yaml/pod.hello-world.yml)
 
 ```yaml
 apiVersion: v1
@@ -65,5 +65,8 @@ spec:
     - containerPort: 8080
 
 ```
+
+2. Запускаем манифест с помощью команды `kubectl apply -f pod.hello-world.yml`
+
 
 
