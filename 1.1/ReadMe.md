@@ -38,6 +38,13 @@
     ```
     - обновить сертификаты `sudo microk8s refresh-certs --cert front-proxy-client.crt`.
 
+4. Установка kubectl:
+
+- curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+- `chmod +x ./kubectl`
+- `sudo mv ./kubectl /usr/local/bin/kubectl`
+- добавление автодополнения в командную оболочку `bash echo "source <(kubectl completion bash)" >> ~/.bashrc`
+
 ### Инструменты и дополнительные материалы, которые пригодятся для выполнения задания
 
 1. [Инструкция](https://microk8s.io/docs/getting-started) по установке MicroK8S.
