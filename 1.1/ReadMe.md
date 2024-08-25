@@ -115,11 +115,11 @@
 
 ![token](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.2.jpg)
 
-3. Пробрасываем порт для возможности подключиться к `dashboard`
+3. Пробрасываем порт с локальной командой 'kubectl' без `microk8s` для возможности подключиться к `dashboard`
 
-![port](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.3.jpg)
+![port](https://github.com/SlavaZakariev/netology-kuber/blob/63f58388f5bb636f689fd59a4795ee1ab681930b/1.1/resources/kub_2.3.jpg)
 
-4. Подключение к `dashboard` через браузер и аутентификация с помощью полученного `token`
+4. Подключение к `dashboard` через браузер и аутентификация с помощью полученного `token` (через **https://**)
 
 ![auth](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.4.jpg)
 
