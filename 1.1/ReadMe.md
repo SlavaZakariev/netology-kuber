@@ -111,6 +111,15 @@
 
 ![ctl](https://github.com/SlavaZakariev/netology-kuber/blob/791121c5c64ab19413af63d5d728e7b6be999c0d/1.1/resources/kub_2.1.jpg)
 
+Для корректной работы `kubectl`, скопировал конфиг:
+
+```bash
+cd $HOME
+mkdir .kube
+cd .kube
+microk8s config > config
+```
+
 2. `Token` для аутентификации в `dashboard`
 
 ![token](https://github.com/SlavaZakariev/netology-kuber/blob/3903f1d5292fdbd5151286d4013e6e81039e0a66/1.1/resources/kub_2.2.jpg)
