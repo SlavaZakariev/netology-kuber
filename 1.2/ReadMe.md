@@ -74,3 +74,10 @@ spec:
 
 ![getpods](https://github.com/SlavaZakariev/netology-kuber/blob/8d398c239d04871833b3e2c76dd99391a49b1afc/1.2/resorces/kub_2.2.jpg)
 
+3. Пробрасываем порт 8080 до пода
+
+![port](https://github.com/SlavaZakariev/netology-kuber/blob/50f0bda95d88f1d33d4e07daea9e45d2905b9aa8/1.2/resorces/kub_2.3.jpg)
+
+4. Проверям подключение через браузер на ПК
+
+![curl](https://github.com/SlavaZakariev/netology-kuber/blob/50f0bda95d88f1d33d4e07daea9e45d2905b9aa8/1.2/resorces/kub_2.4.jpg)
