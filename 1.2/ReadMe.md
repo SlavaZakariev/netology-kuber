@@ -68,5 +68,6 @@ spec:
 
 2. Запускаем манифест с помощью команды `kubectl apply -f pod.hello-world.yml`
 
+![pod](https://github.com/SlavaZakariev/netology-kuber/blob/e5b6850fe7cfc149ae95327fbe937bce215920dc/1.2/resorces/kub_2.1.jpg)
 
 
