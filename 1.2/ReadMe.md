@@ -48,5 +48,22 @@
 
 ---
 
-Решение 1
+### Решение 1
+
+1. Написан манифест `pod.hello-world.yml`
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+spec:
+  containers:
+  - name: hello-world
+    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+    ports:
+    - containerPort: 8080
+
+```
+
 
