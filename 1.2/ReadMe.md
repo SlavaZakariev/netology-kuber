@@ -78,7 +78,7 @@ spec:
 
 ![port](https://github.com/SlavaZakariev/netology-kuber/blob/50f0bda95d88f1d33d4e07daea9e45d2905b9aa8/1.2/resorces/kub_2.3.jpg)
 
-4. Проверям подключение через браузер на ПК
+4. Проверяем подключение через браузер на ПК
 
 ![curl-pod](https://github.com/SlavaZakariev/netology-kuber/blob/50f0bda95d88f1d33d4e07daea9e45d2905b9aa8/1.2/resorces/kub_2.4.jpg)
 
@@ -114,7 +114,7 @@ spec:
     app: netology-web
 ```
 
-2. Запускаем манифесты и проверям статус пода и сервиса
+2. Запускаем манифесты и проверяем статус пода и сервиса
 
 ![status](https://github.com/SlavaZakariev/netology-kuber/blob/02d19e0e5047e07b8dd6c1fba6fb545f94815bd9/1.2/resorces/kub_3.1.jpg)
 
@@ -122,6 +122,6 @@ spec:
 
 ![svc-port](https://github.com/SlavaZakariev/netology-kuber/blob/02d19e0e5047e07b8dd6c1fba6fb545f94815bd9/1.2/resorces/kub_3.2.jpg)
 
-4. Проверям подключение через браузер на ПК
+4. Проверяем подключение через браузер на ПК
 
 ![curl-svc](https://github.com/SlavaZakariev/netology-kuber/blob/02d19e0e5047e07b8dd6c1fba6fb545f94815bd9/1.2/resorces/kub_3.3.jpg)
