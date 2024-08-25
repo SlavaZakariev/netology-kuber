@@ -70,4 +70,7 @@ spec:
 
 ![pod](https://github.com/SlavaZakariev/netology-kuber/blob/e5b6850fe7cfc149ae95327fbe937bce215920dc/1.2/resorces/kub_2.1.jpg)
 
+Проверяем статус созданного пода
+
+![getpods](https://github.com/SlavaZakariev/netology-kuber/blob/8d398c239d04871833b3e2c76dd99391a49b1afc/1.2/resorces/kub_2.2.jpg)
 
