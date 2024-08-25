@@ -81,3 +81,8 @@ spec:
 4. Проверям подключение через браузер на ПК
 
 ![curl](https://github.com/SlavaZakariev/netology-kuber/blob/50f0bda95d88f1d33d4e07daea9e45d2905b9aa8/1.2/resorces/kub_2.4.jpg)
+
+---
+
+### Решение 2
+
