@@ -111,7 +111,7 @@
 
 ![ctl](https://github.com/SlavaZakariev/netology-kuber/blob/791121c5c64ab19413af63d5d728e7b6be999c0d/1.1/resources/kub_2.1.jpg)
 
-Для корректной работы `kubectl`, скопировал конфиг согкласно [инструкции](https://microk8s.io/docs/working-with-kubectl):
+Для корректной работы `kubectl`, скопировал конфиг согласно [инструкции](https://microk8s.io/docs/working-with-kubectl):
 
 ```bash
 cd $HOME
