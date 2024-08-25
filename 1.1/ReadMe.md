@@ -107,7 +107,7 @@
 
 ### Решение 2
 
-1. Установка `kubectl`
+1. Установка `kubectl` (Также можно поставить через команду `sudo snap install kubectl`)
 
 ![ctl](https://github.com/SlavaZakariev/netology-kuber/blob/791121c5c64ab19413af63d5d728e7b6be999c0d/1.1/resources/kub_2.1.jpg)
 
