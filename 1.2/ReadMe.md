@@ -86,7 +86,7 @@ spec:
 
 ### Решение 2
 
-1. Написаны манифесты [pod.hello-world.yml](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.2/yaml/pod.hello-world.yml)
+1. Написаны манифесты [pod.netology-web.yml](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.2/yaml/pod.netology-web.yml) / [service.netology-web.yml](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.2/yaml/service.netology-web.yml)
 
 ```yaml
 apiVersion: v1
