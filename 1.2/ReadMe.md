@@ -86,3 +86,30 @@ spec:
 
 ### Решение 2
 
+1. Написаны манифесты [pod.hello-world.yml](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.2/yaml/pod.hello-world.yml)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netology-web
+  labels:
+    app: netology-web
+spec:
+  containers:
+  - name: netology-web
+    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+```
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: netology-svc
+spec:
+  ports:
+  - name: web
+    protocol: TCP
+    port: 8080
+  selector:
+    app: netology-web
+```
