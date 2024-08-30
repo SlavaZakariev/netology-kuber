@@ -68,7 +68,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.19.2
+        image: nginx:1.20.5
       - name: multitool
         image: wbitt/network-multitool 
 ```
