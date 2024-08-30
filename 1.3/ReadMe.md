@@ -116,7 +116,7 @@ spec:
 
 8. Проверяем статус подов
 
-9. Написан манифест для Service
+9. Написан манифест для **Service**
 
 ```yaml
 apiVersion: v1
@@ -139,19 +139,19 @@ spec:
 
 10. Запущен манифест в пространстве имём **netology**, проверям статус
 
-11. Написан манифест для приложения multitool, в манифесте заранее указано пространство имён и порт
+11. Написан манифест для приложения **multitool**, в манифесте заранее указано пространство имён и порт
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: test-multitool
+  name: multitool
   namespace: netology
 spec:
   containers:
-    - image: wbitt/network-multitool
       name: multitool
-      port:
+    - image: wbitt/network-multitool
+      ports:
       - containerPort: 8080
 ```
 
