@@ -47,10 +47,14 @@
 
 ### Решение 1
 
-1. Написан манифест
+1. Создано отдельное пространство имён **namespace netology**
+
+![ns]()
+
+2. Написан манифест для **Deployment**
 
 ```yaml
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: netology-deployment
@@ -68,9 +72,13 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.20.5
+        image: nginx:1.25.5
+        ports:
+        — containerPort: 80
       - name: multitool
-        image: wbitt/network-multitool 
+        image: wbitt/network-multitool
+        ports:
+        — containerPort: 8080
 ```
 
 
