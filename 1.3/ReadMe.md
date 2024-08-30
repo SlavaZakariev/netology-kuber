@@ -149,10 +149,10 @@ metadata:
   namespace: netology
 spec:
   containers:
-      name: multitool
-    - image: wbitt/network-multitool
-      ports:
-      - containerPort: 8080
+  - name: multitool
+    image: wbitt/network-multitool
+    ports:
+    - containerPort: 8080
 ```
 
 
