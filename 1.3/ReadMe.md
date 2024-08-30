@@ -137,6 +137,26 @@ spec:
       targetPort: 8080
 ```
 
+10. Запущен манифест в пространстве имём **netology**, проверям статус
+
+11. Написан манифест для приложения multitool, в манифесте заранее указано пространство имён и порт
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-multitool
+  namespace: netology
+spec:
+  containers:
+    - image: wbitt/network-multitool
+      name: multitool
+      port:
+      - containerPort: 8080
+```
+
+
+
 ---
 
 ### Решение 2
