@@ -116,7 +116,26 @@ spec:
 
 8. Проверяем статус подов
 
+9. Написан манифест для Service
 
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: deployment-service
+spec:
+  selector:
+    app: main
+  ports:
+    - name: http-nginx
+      port:  80
+      protocol: TCP
+      targetPort: 80
+    - name: http-multitool
+      port:  8080
+      protocol: TCP
+      targetPort: 8080
+```
 
 ---
 
