@@ -73,12 +73,8 @@ spec:
       containers:
       - name: nginx
         image: nginx:1.25.5
-        ports:
-        — containerPort: 80
       - name: multitool
         image: wbitt/network-multitool
-        ports:
-        — containerPort: 8080
 ```
 
 
