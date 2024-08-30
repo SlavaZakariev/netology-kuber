@@ -77,6 +77,44 @@ spec:
         image: wbitt/network-multitool
 ```
 
+3. Запушен манифест
+
+4. Проверяем статус, один под в ошибке
+
+5. Смотрим логи и исправляем манифест, добавив альтернативый порт для multitool, так как по умолчанию оба стучатся на порт 80
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netology-deployment
+  labels:
+    app: main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.5
+      - name: multitool
+        image: wbitt/network-multitool
+        env:
+          - name: HTTP_PORT
+            value: "8080"
+```
+
+6. Перезапускаем манифест и проверям статус, ошибка более не воспроизводится.
+
+7. Увеличиваем количество реплик до 2-х
+
+
 
 ---
 
