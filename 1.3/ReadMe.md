@@ -50,7 +50,7 @@
 1. Написан манифест
 
 ```yaml
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: netology-deployment
