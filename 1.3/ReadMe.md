@@ -179,9 +179,52 @@ spec:
 
 1. Написан манифест [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/deployment.init.yml) для приложения nginx
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-init
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-init
+  template:
+    metadata:
+      labels:
+        app: web-init
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.5
+      initContainers:
+      - name: busybox-init
+        image: busybox
+        command: ['sh', '-c', "until nslookup service-init.\
+        $(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)\
+        .svc.cluster.local; do echo waiting for svc-nginx-init; sleep 2; done"]
+```
+
+2. Запушен манифест в пространстве имён **netology**, проверяем статус
+
 ![nginx](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.1.jpg)
 
-2. Написан манифест [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/service.init.yml)
+3. Написан манифест [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/service.init.yml)
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-init
+spec:
+  ports:
+    - name: web
+      port: 80
+  selector:
+    app: web-init
+```
+
+4. Запушен манифест в пространстве имён **netology**, проверяем статус и наличие вновьс созданного сервиса
 
 ![service-init](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.1.jpg)
 
