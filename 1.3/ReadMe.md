@@ -226,5 +226,5 @@ spec:
 
 4. Запушен манифест в пространстве имён **netology**, проверяем статус и наличие вновьс созданного сервиса
 
-![service-init](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.1.jpg)
+![service-init](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.2.jpg)
 
