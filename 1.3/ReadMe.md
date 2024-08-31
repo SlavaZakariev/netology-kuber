@@ -83,7 +83,7 @@ spec:
 
 4. Проверяем статус, один под в ошибке
 
-![ns](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.3.jpg)
+![error](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.3.jpg)
 
 5. Смотрим логи и исправляем манифест, добавив альтернативый порт для **multitool**, так как по умолчанию оба стучатся на порт 80
 
@@ -116,13 +116,13 @@ spec:
 
 6. Перезапускаем манифест и проверям статус, ошибка более не воспроизводится.
 
-![ns](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.5.jpg)
+![fix](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.5.jpg)
 
 7. Увеличиваем количество реплик до 2-х, добавив в манифесте цифру 2 в поле **replicas**
 
 8. Проверяем статус подов
 
-![ns](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.6.jpg)
+![status](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.6.jpg)
 
 9. Написан манифест для **Service**
 
@@ -147,6 +147,8 @@ spec:
 
 10. Запущен манифест в пространстве имём **netology**, проверям статус
 
+![svc](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.7.jpg)
+
 11. Написан манифест для приложения **multitool**, в манифесте заранее указано пространство имён и порт
 
 ```yaml
@@ -163,7 +165,13 @@ spec:
     - containerPort: 8080
 ```
 
+12. Запускаем манифест для **multitool**
 
+![multitool](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.8.jpg)
+
+13. Проверяем с помощью curl ответ от пода multitool
+
+![curl](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.9.jpg)
 
 ---
 
