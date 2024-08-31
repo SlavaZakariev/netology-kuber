@@ -16,7 +16,7 @@ spec:
       - name: nginx
         image: nginx:1.25.5
       initContainers:
-      - name: init-busybox
+      - name: busybox-init
         image: busybox
         command: ['sh', '-c', "until nslookup svc-nginx-init.\
         $(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)\
