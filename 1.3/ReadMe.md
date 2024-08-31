@@ -169,7 +169,7 @@ spec:
 
 ![multitool](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.8.jpg)
 
-13. Проверяем с помощью curl ответ от пода multitool
+13. Проверяем с помощью **curl** ответ от пода **multitool**
 
 ![curl](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.9.jpg)
 
