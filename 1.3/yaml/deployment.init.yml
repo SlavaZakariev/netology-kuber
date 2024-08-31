@@ -18,6 +18,6 @@ spec:
       initContainers:
       - name: busybox-init
         image: busybox
-        command: ['sh', '-c', "until nslookup svc-nginx-init.\
+        command: ['sh', '-c', "until nslookup service-init.\
         $(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)\
         .svc.cluster.local; do echo waiting for svc-nginx-init; sleep 2; done"]
