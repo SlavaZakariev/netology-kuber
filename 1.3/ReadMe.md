@@ -177,3 +177,11 @@ spec:
 
 ### Решение 2
 
+1. Написан манифест [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/deployment.init.yml) для приложения nginx
+
+![nginx](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.1.jpg)
+
+2. Написан манифест [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/service.init.yml)
+
+![service-init](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.1.jpg)
+
