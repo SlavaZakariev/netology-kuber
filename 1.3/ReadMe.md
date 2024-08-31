@@ -118,13 +118,13 @@ spec:
 
 ![fix](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.5.jpg)
 
-7. Увеличиваем количество реплик до 2-х, добавив в манифесте цифру 2 в поле **replicas**
+7. Увеличиваем количество реплик до 2-х, добавив в манифесте [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/deployment.netology.yml) цифру 2 в поле **replicas**
 
 8. Проверяем статус подов
 
 ![status](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.6.jpg)
 
-9. Написан манифест для **Service**
+9. Написан манифест для [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/service.netology.yml)
 
 ```yaml
 apiVersion: v1
@@ -149,7 +149,7 @@ spec:
 
 ![svc](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.7.jpg)
 
-11. Написан манифест для приложения **multitool**, в манифесте заранее указано пространство имён и порт
+11. Написан манифест для приложения [multitool](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.3/yaml/pod.multitool.yml), в манифесте заранее указано пространство имён и порт
 
 ```yaml
 apiVersion: v1
