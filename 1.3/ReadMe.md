@@ -85,7 +85,7 @@ spec:
 
 ![error](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.3.jpg)
 
-5. Смотрим логи и исправляем манифест, добавив альтернативый порт для **multitool**, так как по умолчанию оба стучатся на порт 80
+5. Смотрим логи и исправляем манифест, добавив альтернативный порт для **multitool**, так как по умолчанию оба стучатся на порт 80
 
 ```yaml
 apiVersion: apps/v1
@@ -114,7 +114,7 @@ spec:
             value: "8080"
 ```
 
-6. Перезапускаем манифест и проверям статус, ошибка более не воспроизводится.
+6. Перезапускаем манифест и проверяем статус, ошибка более не воспроизводится.
 
 ![fix](https://github.com/SlavaZakariev/netology-kuber/blob/70aef244e5d2a708d340a8a65e4d2c0a471e0dbb/1.3/resources/kub_2-3_1.5.jpg)
 
@@ -145,7 +145,7 @@ spec:
       targetPort: 8080
 ```
 
-10. Запущен манифест в пространстве имём **netology**, проверям статус
+10. Запущен манифест в пространстве имён **netology**, проверяем статус
 
 ![svc](https://github.com/SlavaZakariev/netology-kuber/blob/666b52e4456ec2ac63097cf57358fdf56f6dd891/1.3/resources/kub_2-3_1.7.jpg)
 
@@ -224,7 +224,7 @@ spec:
     app: web-init
 ```
 
-4. Запушен манифест в пространстве имён **netology**, проверяем статус и наличие вновьс созданного сервиса
+4. Запушен манифест в пространстве имён **netology**, проверяем статус и наличие вновь созданного сервиса
 
 ![service-init](https://github.com/SlavaZakariev/netology-kuber/blob/c32164b11eb3137d3973135a2ea44680807ba399/1.3/resources/kub_2-3_2.2.jpg)
 
