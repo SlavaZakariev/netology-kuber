@@ -9,7 +9,7 @@ spec:
       port:  9001
       protocol: TCP
       targetPort: 80
-    - name: http-app-mult
+    - name: http-app-multi
       port:  9002
       protocol: TCP
       targetPort: 8080
