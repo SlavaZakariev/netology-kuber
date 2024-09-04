@@ -83,5 +83,21 @@ spec:
 3. Написан манифест для **Service**
 
 ```yaml
-
+apiVersion: v1
+kind: Service
+metadata:
+  name: deployment-service
+  namespace: netology
+spec:
+  ports:
+    - name: http-app
+      port:  9001
+      protocol: TCP
+      targetPort: 80
+    - name: http-app-multi
+      port:  9002
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: main
 ```
