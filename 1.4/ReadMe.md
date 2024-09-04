@@ -49,5 +49,29 @@
 1. Написан манифест
 
 ```yaml
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netology-deployment
+  namespace: netology
+  labels:
+    app: main
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.5
+      - name: multitool
+        image: wbitt/network-multitool
+        env:
+          - name: HTTP_PORT
+            value: "8080"
 ```
