@@ -78,7 +78,7 @@ spec:
 
 2. Созданы 3 пода
 
-![]()
+![dep]()
 
 3. Написан манифест для **Service**
 
@@ -101,3 +101,25 @@ spec:
   selector:
     app: main
 ```
+
+4. Создан сервис
+
+![svc]()
+
+5. Написан манифест для **Pod**
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-multitool
+  namespace: netology
+spec:
+  containers:
+    - image: wbitt/network-multitool
+      name: app-multitool
+```
+
+6. Создан сервис
+
+![pod]()
