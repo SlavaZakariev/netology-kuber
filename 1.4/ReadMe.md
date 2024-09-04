@@ -46,7 +46,7 @@
 
 ### Решение 1
 
-1. Написан манифест
+1. Написан манифест для **Deployment**
 
 ```yaml
 apiVersion: apps/v1
@@ -75,3 +75,4 @@ spec:
           - name: HTTP_PORT
             value: "8080"
 ```
+
