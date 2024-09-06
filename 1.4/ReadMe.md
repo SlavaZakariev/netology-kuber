@@ -136,7 +136,7 @@ spec:
 
 ### Решение 2
 
-1. Написан манифест для [Service Node](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/service.netology.yml)
+1. Написан манифест для [Service NodePort](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/service.netology.yml)
 
 ```yaml
 apiVersion: v1
