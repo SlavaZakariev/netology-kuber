@@ -78,7 +78,7 @@ spec:
 
 2. Созданы 3 пода
 
-![dep]()
+![dep](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.1.jpg)
 
 3. Написан манифест для [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/service.netology.yml)
 
@@ -104,7 +104,7 @@ spec:
 
 4. Создан сервис
 
-![svc]()
+![svc](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.2.jpg)
 
 5. Написан манифест для [Pod](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/pod.netology.yml)
 
@@ -120,6 +120,14 @@ spec:
       name: app-multitool
 ```
 
-6. Создан сервис
+6. Создан под app-multitool
 
-![pod]()
+![pod](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.3.jpg)
+
+7. Проверяем доступность по 80 порту 1-й и 2-й под.
+
+![curl1](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.4.jpg)
+
+8. Проверяем доступность по 9001 и 9002 порту 3-й под.
+
+![curl2](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.5.jpg)
