@@ -159,8 +159,12 @@ spec:
 
 2. Создан сервис
 
-![svc-node]()
+![svc-node](https://github.com/SlavaZakariev/netology-kuber/blob/866cc0b12eb734e62fd0c6e53100c801b175408a/1.4/resources/kub_2-4_2.1.jpg)
 
-3. Доступ через браузер с локального ПК
+3. Доступ через браузер с локального ПК на 3000 порт
 
-![browser]()
+![browser](https://github.com/SlavaZakariev/netology-kuber/blob/866cc0b12eb734e62fd0c6e53100c801b175408a/1.4/resources/kub_2-4_2.2.jpg)
+
+4. Доступ через браузер с локального ПК на 3001 порт
+
+![browser](https://github.com/SlavaZakariev/netology-kuber/blob/866cc0b12eb734e62fd0c6e53100c801b175408a/1.4/resources/kub_2-4_2.3.jpg)
