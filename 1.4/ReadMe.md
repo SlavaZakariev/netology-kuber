@@ -46,7 +46,7 @@
 
 ### Решение 1
 
-1. Написан манифест для **Deployment**
+1. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/deployment.netology.yml)
 
 ```yaml
 apiVersion: apps/v1
@@ -80,7 +80,7 @@ spec:
 
 ![dep]()
 
-3. Написан манифест для **Service**
+3. Написан манифест для [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/service.netology.yml)
 
 ```yaml
 apiVersion: v1
@@ -106,7 +106,7 @@ spec:
 
 ![svc]()
 
-5. Написан манифест для **Pod**
+5. Написан манифест для [Pod](https://github.com/SlavaZakariev/netology-kuber/blob/main/1.4/yaml/pod.netology.yml)
 
 ```yaml
 apiVersion: v1
