@@ -131,3 +131,36 @@ spec:
 8. Проверяем доступность по 9001 и 9002 порту 3-й под.
 
 ![curl2](https://github.com/SlavaZakariev/netology-kuber/blob/5368ba469f74dfdbc007bf59ac8805cd569b52bd/1.4/resources/kub_2-4_1.5.jpg)
+
+---
+
+### Решение 2
+
+1. Написан манифест для [Service Node]()
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: deployment-service-nodeport
+  namespace: netology
+spec:
+  ports:
+    - name: http-app
+      port:  80
+      nodePort: 30000
+    - name: http-app-multi
+      port:  8080
+      nodePort: 30001
+  selector:
+    app: main
+  type: NodePort
+```
+
+2. Создан сервис
+
+![svc-node]()
+
+3. Доступ через браузер с локального ПК
+
+![browser]()
