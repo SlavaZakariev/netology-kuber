@@ -175,7 +175,7 @@ spec:
               number: 80
 ```
 
-4. Напускаем манифест Ingress
+4. Запускаем манифест Ingress
 
 ![apply-ing](https://github.com/SlavaZakariev/netology-kuber/blob/2b1da5d8d5b5e13d1ef57d0db332295c83f17fbf/1.5/resources/kub_2-5_2.3.jpg)
 
