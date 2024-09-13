@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: netology
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: main-front
+  template:
+    metadata:
+      labels:
+        app: main-front
+    spec:
+      containers:
+        - image: nginx:1.25.5
+          name: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-frontend
+  namespace: netology
+spec:
+  ports:
+    - name: main-front
+      port: 80
+  selector:
+    app: main-front
