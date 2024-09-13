@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: netology
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main-back
+  template:
+    metadata:
+      labels:
+        app: main-back
+    spec:
+      containers:
+        - image: wbitt/network-multitool
+          name: multitool
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-backend
+  namespace: netology
+spec:
+  ports:
+    - name: main-back
+      port: 80
+  selector:
+    app: main-back
