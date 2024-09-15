@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-multitool-busybox
+  namespace: netology-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo "current date = $(date)" >> /busybox_data/date.log; sleep 10; done']
+        volumeMounts:
+          - mountPath: "/busybox_data"
+            name: deployment-volume
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+          - name: deployment-volume
+            mountPath: "/multitool_data"
+      volumes:
+        - name: deployment-volume
+          emptyDir: {}
