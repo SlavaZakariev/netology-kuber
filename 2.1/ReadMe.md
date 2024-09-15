@@ -143,6 +143,6 @@ spec:
 
 ![ds](https://github.com/SlavaZakariev/netology-kuber/blob/02339eee98b85488759b0c9dfe9da71a8e901d8e/2.1/resources/kub_2-6_2.1.jpg)
 
-3. Подключение к поду и проверка записи и доступности данных в логе
+3. Подключение к поду, проверка записи и доступности данных в логе
 
 ![log](https://github.com/SlavaZakariev/netology-kuber/blob/02339eee98b85488759b0c9dfe9da71a8e901d8e/2.1/resources/kub_2-6_2.2.jpg)
