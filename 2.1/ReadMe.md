@@ -100,8 +100,49 @@ spec:
 
 4. Проверяем доступность данных из тома для busybox
 
-![vol](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.4.jpg)
+![cat-vol-b](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.4.jpg)
 
 5. Проверяем доступность данных из тома для multitool
 
-![vol](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.5.jpg)
+![cat-vol-m](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.5.jpg)
+
+---
+
+### Решение 2
+
+1. Написан манифест для [DaemonSet](https://github.com/SlavaZakariev/netology-kuber/blob/02339eee98b85488759b0c9dfe9da71a8e901d8e/2.1/yaml/daemonset.multitool.netology.yml)
+
+```yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: multitool-logs
+  namespace: netology-2
+spec:
+  selector:
+    matchLabels:
+      app: multitool-logs
+  template:
+    metadata:
+      labels:
+        app: multitool-logs
+    spec:
+      containers:
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+            - name: log-volume
+              mountPath: /log_data
+      volumes:
+        - name: log-volume
+          hostPath:
+            path: /var/log
+```
+
+2. Развёрнут DeamonSet
+
+![ds](https://github.com/SlavaZakariev/netology-kuber/blob/02339eee98b85488759b0c9dfe9da71a8e901d8e/2.1/resources/kub_2-6_2.1.jpg)
+
+3. Подключение к поду и проверка записи и доступности данных в логе
+
+![log](https://github.com/SlavaZakariev/netology-kuber/blob/02339eee98b85488759b0c9dfe9da71a8e901d8e/2.1/resources/kub_2-6_2.2.jpg)
