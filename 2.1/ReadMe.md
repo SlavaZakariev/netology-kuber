@@ -48,3 +48,60 @@
 3. Репозиторий должен содержать тексты манифестов или ссылки на них в файле README.md.
 
 ---
+
+### Решение 1
+
+1. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/yaml/daemonset.multitool.netology.yml)
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-multitool-busybox
+  namespace: netology-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo "current date = $(date)" >> /busybox_data/date.log; sleep 10; done']
+        volumeMounts:
+          - mountPath: "/busybox_data"
+            name: deployment-volume
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+          - name: deployment-volume
+            mountPath: "/multitool_data"
+      volumes:
+        - name: deployment-volume
+          emptyDir: {}
+```
+
+2. Развёрнуто пространство имён netology-2
+
+![ns](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.1.jpg)
+
+2. Развёрнут Deployment
+
+![depl](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.2.jpg)
+
+3. Проверяем наличии тома в контейнерах
+
+![vol](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.3.jpg)
+
+4. Проверяем доступность данных из тома для busybox
+
+![vol](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.4.jpg)
+
+5. Проверяем доступность данных из тома для multitool
+
+![vol](https://github.com/SlavaZakariev/netology-kuber/blob/42bd25a7a2b75f297bc4c38ebdea3b81575ae855/2.1/resources/kub_2-6_1.5.jpg)
