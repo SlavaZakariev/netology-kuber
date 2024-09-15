@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: multitool-logs
+  namespace: netology-2
+spec:
+  selector:
+    matchLabels:
+      app: multitool-logs
+  template:
+    metadata:
+      labels:
+        app: multitool-logs
+    spec:
+      containers:
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+            - name: log-volume
+              mountPath: /log_data
+      volumes:
+        - name: log-volume
+          hostPath:
+            path: /var/log
