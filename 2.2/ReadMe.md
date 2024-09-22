@@ -159,7 +159,7 @@ spec:
 
 1. Установлен плагин **csidrivers**
 
-![csi]()
+![csi](https://github.com/SlavaZakariev/netology-kuber/blob/6f19c56bcfa96e1f8d337f39e9f24676df866716/2.2/resources/kub_2-7_2.1.jpg)
 
 2. Написан манифест для [Deployment]()
 
