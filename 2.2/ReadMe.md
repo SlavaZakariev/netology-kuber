@@ -183,12 +183,12 @@ spec:
       - name: multitool
         image: wbitt/network-multitool
         volumeMounts:
-          - name: app-vol-pvc
+          - name: app-pvc-nfs
             mountPath: /multitool_data
       volumes:
-        - name: app-vol-pvc
+        - name: app-pvc-nfs
           persistentVolumeClaim:
-            claimName: pvc1-nfs
+            claimName: app-pvc-nfs
 ```
 
 3. Запущен Deployment, статус пода в Pending, так как нет созданного хранилища
