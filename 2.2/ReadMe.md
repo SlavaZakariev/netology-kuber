@@ -235,7 +235,12 @@ spec:
 
 7. Проверяем снова статус пода - сменился с Pending на Running
 
-![sc-pvc](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.4.jpg)
+![status](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.4.jpg)
 
+8. Заходим на узле в папку хранилища и создаём файл **test.txt**, добавляем в файл запись "netology"
 
+![node](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.5.jpg)
 
+9. Заходим на под в папку хранилища и создаём файл **test2.txt**, добавляем в файл запись "netology2", также проверяем наличие файла созданного на узле.
+
+![pod-exec](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.6.jpg)
