@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-pvc-nfs
+  namespace: netology-2
+spec:
+  storageClassName: nfs-csi
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 2Gi
