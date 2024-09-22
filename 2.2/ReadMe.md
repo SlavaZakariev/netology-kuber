@@ -135,7 +135,7 @@ spec:
 
 ![dep](https://github.com/SlavaZakariev/netology-kuber/blob/f841399913e53d9a00c9232835e661636e83433f/2.2/resources/kub_2-7_1.2.jpg)
 
-5. Проверям загрузку и доступность данных в контейнере
+5. Проверяем загрузку и доступность данных в контейнере
 
 ![data](https://github.com/SlavaZakariev/netology-kuber/blob/f841399913e53d9a00c9232835e661636e83433f/2.2/resources/kub_2-7_1.3.jpg)
 
@@ -143,10 +143,10 @@ spec:
 
 ![del](https://github.com/SlavaZakariev/netology-kuber/blob/f841399913e53d9a00c9232835e661636e83433f/2.2/resources/kub_2-7_1.4.jpg)
 
-7. Проверям наличие данных в хранилище
+7. Проверяем наличие данных в хранилище
 
 ![data](https://github.com/SlavaZakariev/netology-kuber/blob/f841399913e53d9a00c9232835e661636e83433f/2.2/resources/kub_2-7_1.5.jpg)
 
-8. Проверям статус PVC
+8. Проверяем статус PVC
 
 ![PVC](https://github.com/SlavaZakariev/netology-kuber/blob/f841399913e53d9a00c9232835e661636e83433f/2.2/resources/kub_2-7_1.6.jpg)
