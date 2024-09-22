@@ -191,4 +191,39 @@ spec:
             claimName: pvc1-nfs
 ```
 
-3. Запущен Deployment
+3. Запущен Deployment, статус пода в Pending, так как нет созданного хранилища
+
+
+4. Написан манифест для SC NFS
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 172.27.169.38
+  share: /srv/nfs
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+mountOptions:
+  - hard
+  - nfsvers=4.1
+```
+
+5. Написан манифест для PVC NFS
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-pvc-nfs
+  namespace: netology-2
+spec:
+  storageClassName: nfs-csi
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 2Gi
+```
