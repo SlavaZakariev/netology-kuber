@@ -228,3 +228,14 @@ spec:
     requests:
       storage: 2Gi
 ```
+
+6. Запускаем манифесты SC и PVC
+
+![sc-pvc](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.2.jpg)
+
+7. Проверяем снова статус пода - сменился с Pending на Running
+
+![sc-pvc](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.3.jpg)
+
+
+
