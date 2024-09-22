@@ -57,7 +57,7 @@
 
 ### Решение 1
 
-1. Написан манифест для [deployment]()
+1. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/deployment.busybox.multitool.netology.yml)
 
 ```yaml
 apiVersion: apps/v1
@@ -92,7 +92,7 @@ spec:
           persistentVolumeClaim:
             claimName: pvc1-vol
 ```
-2. Написаны манифесты для [PV]() и [PVC]()
+2. Написаны манифесты для [PV](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/pv1.netology.yml) и [PVC](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/pvc1.netology.yml)
 
 ```yaml
 apiVersion: v1
