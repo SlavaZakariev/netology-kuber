@@ -90,7 +90,7 @@ spec:
       volumes:
         - name: app-vol-pvc
           persistentVolumeClaim:
-            claimName: pvc-vol
+            claimName: pvc1-vol
 ```
 2. Написаны манифесты для [PV]() и [PVC]()
 
