@@ -157,9 +157,9 @@ spec:
 
 ### Решение 2
 
-1. Установлен плагин
+1. Установлен плагин **csidrivers**
 
-
+![csi]()
 
 2. Написан манифест для [Deployment]()
 
@@ -190,3 +190,5 @@ spec:
           persistentVolumeClaim:
             claimName: pvc1-nfs
 ```
+
+3. Запущен Deployment
