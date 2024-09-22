@@ -161,7 +161,7 @@ spec:
 
 ![csi](https://github.com/SlavaZakariev/netology-kuber/blob/6f19c56bcfa96e1f8d337f39e9f24676df866716/2.2/resources/kub_2-7_2.1.jpg)
 
-2. Написан манифест для [Deployment]()
+2. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/deployment.multitool.netology.yml)
 
 ```yaml
 apiVersion: apps/v1
@@ -194,7 +194,7 @@ spec:
 3. Запущен Deployment, статус пода в Pending, так как нет созданного хранилища
 
 
-4. Написан манифест для SC NFS
+4. Написан манифест для [SC NFS](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/sc.nfs.netology.yml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -212,7 +212,7 @@ mountOptions:
   - nfsvers=4.1
 ```
 
-5. Написан манифест для PVC NFS
+5. Написан манифест для [PVC NFS](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/pvc1.nfs.netology.yml)
 
 ```yaml
 apiVersion: v1
