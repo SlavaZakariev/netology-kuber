@@ -57,7 +57,7 @@
 
 ### Решение 1
 
-1. Написан манифест
+1. Написан манифест для [deployment]()
 
 ```yaml
 apiVersion: apps/v1
@@ -92,3 +92,15 @@ spec:
           persistentVolumeClaim:
             claimName: pvc-vol
 ```
+2. Написаны манифесты для [PV]() и [PVC]()
+
+```yaml
+
+```
+```yaml
+
+```
+
+3. Запускаем PV и PVC
+
+4. Запускаем deployment
