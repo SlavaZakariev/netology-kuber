@@ -157,3 +157,36 @@ spec:
 
 ### Решение 2
 
+1. Установлен плагин
+
+
+
+2. Написан манифест для [Deployment]()
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netology-app-multitool
+  namespace: netology-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+          - name: app-vol-pvc
+            mountPath: /multitool_data
+      volumes:
+        - name: app-vol-pvc
+          persistentVolumeClaim:
+            claimName: pvc1-nfs
+```
