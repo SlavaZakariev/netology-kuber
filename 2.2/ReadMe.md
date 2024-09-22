@@ -52,3 +52,43 @@
 1. Домашняя работа оформляется в Git-репозитории в файле README.md. На выполненное задание пришлите ссылку на .md-файл.
 2. Файл README.md должен содержать скриншоты вывода необходимых команд `kubectl`, а также скриншоты результатов.
 3. Репозиторий должен содержать тексты манифестов или ссылки на них в файле README.md.
+
+---
+
+### Решение 1
+
+1. Написан манифест
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-multitool-busybox
+  namespace: netology-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo "current date = $(date)" >> /busybox_data/date.log; sleep 5; done']
+        volumeMounts:
+          - name: app-vol-pvc
+            mountPath: /busybox_data
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+          - name: app-vol-pvc
+            mountPath: /multitool_data
+      volumes:
+        - name: app-vol-pvc
+          persistentVolumeClaim:
+            claimName: pvc-vol
+```
