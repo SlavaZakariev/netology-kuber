@@ -193,6 +193,7 @@ spec:
 
 3. Запущен Deployment, статус пода в Pending, так как нет созданного хранилища
 
+![dep-pen](https://github.com/SlavaZakariev/netology-kuber/blob/b60b814e015d7cf1ede09d0cefdbaacbc325b6ab/2.2/resources/kub_2-7_2.2.jpg)
 
 4. Написан манифест для [SC NFS](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.2/yaml/sc.nfs.netology.yml)
 
