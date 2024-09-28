@@ -57,7 +57,7 @@ metadata:
   name: configmap-nginx-multitool
   namespace: netology-2
 data:
-  HTTP-PORT: 8080
+  HTTP-PORT: "8080"
   index.html: |
     <html>
     <h1>Welcome</h1>
