@@ -48,7 +48,7 @@
 
 ### Решение 1
 
-1. Создадим манифест для [ConfigMap]() для начала, чтобы 2-й контейнер multitool выходил по альтернативному порту
+1. Создадим манифест для [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/configmap.netology.yml) для начала, чтобы 2-й контейнер multitool выходил по альтернативному порту
 
 ```yaml
 apiVersion: v1
@@ -70,7 +70,7 @@ data:
 
 ![]()
 
-3. Написан манифест [Deployment]() для Nginx и Multitool. Привяжем к страницу из ConfigMap для nginx и порт для multitool
+3. Написан манифест [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/deployment.nginx.multitool.netology.yml) для Nginx и Multitool. Привяжем к страницу из ConfigMap для nginx и порт для multitool
 
 ```yaml
 apiVersion: apps/v1
@@ -115,7 +115,7 @@ spec:
 
 ![]()
 
-5. Написан манифест [Service NodePort](), чтобы контейнеры были доступны вне сети кубера
+5. Написан манифест [Service NodePort](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/service.netology.yml), чтобы контейнеры были доступны вне сети кубера
 
 ```yaml
 apiVersion: v1
