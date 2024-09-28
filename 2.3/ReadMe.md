@@ -205,15 +205,15 @@ data:
     </html>
 ```
 
-3. Создаём самоподписные сертификаты **tls.crt** и **tls.key** для домена app-nginx.ru на 1 год
+3. Создаём самоподписные сертификаты **tls.crt** и **tls.key** для домена **app-nginx.ru** на 1 год
 
 ![cert](https://github.com/SlavaZakariev/netology-kuber/blob/eebb47d07df7e50e362b7c1ca1362e622fcc52b5/2.3/resources/kub_2-8_2.1.jpg)
 
-4. Создаём secret и проверяем статус созданного объёкта в пространстве имён netology-2
+4. Создаём **secret** и проверяем статус созданного объёкта в пространстве имён **netology-2**
 
 ![secret](https://github.com/SlavaZakariev/netology-kuber/blob/eebb47d07df7e50e362b7c1ca1362e622fcc52b5/2.3/resources/kub_2-8_2.2.jpg)
 
-5. Проверяем secret в формате yaml для проверки наличия ключей и даты создания
+5. Проверяем secret в формате **yaml** для проверки наличия ключей и даты создания
 
 ```yaml
 apiVersion: v1
@@ -234,6 +234,54 @@ kind: List
 metadata:
   resourceVersion: ""
 ```
+
+6. Написан манифест для [Ingress]()
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-https
+  namespace: netology-2
+spec:
+  rules:
+    - host: app-nginx.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: service-https
+                port:
+                  number: 80
+
+  tls:
+  - hosts:
+    - app-nginx.ru
+      secretName: secret-tls
+```
+
+6. Написан манифест [Service]() для Nginx
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-nginx
+  namespace: netology-2
+spec:
+  type: NodePort
+  ports:
+    - name: nginx-https
+      port:  80
+      nodePort: 30002
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: app-main
+```
+
 6. Запустим манифесты **ConfigMap**, **Deployment**, 
 
 ![pods]()
