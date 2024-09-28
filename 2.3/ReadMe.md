@@ -48,7 +48,7 @@
 
 ### Решение 1
 
-1. Создадим манифест для [ConfigMap]() для начала
+1. Создадим манифест для [ConfigMap]() для начала, чтобы 2-й контейнер multitool выходил по альтернативному порту
 
 ```yaml
 apiVersion: v1
@@ -66,11 +66,11 @@ data:
     </html>
 ```
 
-2. Запустим манифест ConfigMap
+2. Запустим манифест **ConfigMap**
 
 ![]()
 
-3. Написан манифест [Deployment]() для Nginx и Multitool
+3. Написан манифест [Deployment]() для Nginx и Multitool. Привяжем к страницу из ConfigMap для nginx и порт для multitool
 
 ```yaml
 apiVersion: apps/v1
@@ -111,11 +111,11 @@ spec:
             name: configmap-nginx-multitool
 ```
 
-4. Запустим манифест Deployment
+4. Запустим манифест **Deployment**
 
 ![]()
 
-5. Написан манифест [Service]() так как в Deployment два контейнера
+5. Написан манифест [Service NodePort](), чтобы контейнеры были доступны вне сети кубера
 
 ```yaml
 apiVersion: v1
@@ -139,3 +139,5 @@ spec:
   selector:
     app: app-main
 ```
+
+5. Запустим манифест **Service**
