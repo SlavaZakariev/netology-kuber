@@ -144,7 +144,7 @@ spec:
 
 ![svc](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.3.jpg)
 
-6. Проверям через браузер nginx через заданный в svc порт 30000
+6. Проверям через браузер nginx через заданный в svc порт 30000 (кириллицу не разпознало)
 
 ![nginx](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.4.jpg)
 
