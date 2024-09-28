@@ -158,7 +158,7 @@ spec:
 
 ### Решение 2
 
-1. Написан манифест для [Deployment]() для Nginx
+1. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/deployment.nginx.netology.yml) для Nginx
 
 ```yaml
 apiVersion: apps/v1
@@ -195,7 +195,7 @@ spec:
 
 ![deploy-nginx]()
 
-3. Написан манифест [ConfigMap]() для Nginx.
+3. Написан манифест [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/2440b45256d797386fd4ccc52fc562109af4b3a8/2.3/yaml/configmap.nginx.netology.yml) для Nginx.
 
 ```yaml
 apiVersion: v1
