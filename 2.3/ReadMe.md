@@ -259,7 +259,7 @@ spec:
   tls:
   - hosts:
     - app-nginx.ru
-      secretName: secret-tls
+    secretName: secret-tls
 ```
 
 6. Написан манифест [Service]() для Nginx
