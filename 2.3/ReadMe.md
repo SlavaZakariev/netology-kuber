@@ -190,12 +190,7 @@ spec:
           configMap:
             name: configmap-nginx
 ```
-
-2. Запустим манифест **Deployment**
-
-![deploy-nginx]()
-
-3. Написан манифест [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/2440b45256d797386fd4ccc52fc562109af4b3a8/2.3/yaml/configmap.nginx.netology.yml) для Nginx.
+2. Написан манифест [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/2440b45256d797386fd4ccc52fc562109af4b3a8/2.3/yaml/configmap.nginx.netology.yml) для Nginx.
 
 ```yaml
 apiVersion: v1
@@ -212,19 +207,15 @@ data:
     </html>
 ```
 
-4. Запустим манифест **CongifMap**
-
-![configmap-nginx]()
-
-5. Создаём самоподписные сертификаты **tls.crt** и **tls.key** для домена app-nginx.ru на 1 год
+3. Создаём самоподписные сертификаты **tls.crt** и **tls.key** для домена app-nginx.ru на 1 год
 
 ![cert]()
 
-6. Создаём secret и проверяем статус созданного объёкта в пространстве имён netology-2
+4. Создаём secret и проверяем статус созданного объёкта в пространстве имён netology-2
 
 ![secret]()
 
-7. Проверяем secret в формате yaml для проверки наличия ключей и даты создания
+5. Проверяем secret в формате yaml для проверки наличия ключей и даты создания
 
 ```yaml
 apiVersion: v1
@@ -245,3 +236,6 @@ kind: List
 metadata:
   resourceVersion: ""
 ```
+6. Запустим манифесты **ConfigMap**, **Deployment**, 
+
+![pods]()
