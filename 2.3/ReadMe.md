@@ -48,7 +48,7 @@
 
 ### Решение 1
 
-1. Создадим манифест для [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/configmap.netology.yml) для начала, чтобы 2-й контейнер multitool выходил по альтернативному порту
+1. Написан манифест для [ConfigMap](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/configmap.netology.yml) для начала, чтобы 2-й контейнер multitool выходил по альтернативному порту
 
 ```yaml
 apiVersion: v1
@@ -158,4 +158,60 @@ spec:
 
 ### Решение 2
 
+1. Написан манифест для [Deployment]() для Nginx
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-nginx
+  namespace: netology-2
+  labels:
+    app: app-main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.5
+        volumeMounts:
+          - name: nginx-index-file
+            mountPath: /usr/share/nginx/html/
+
+      volumes:
+        - name: nginx-index-file
+          configMap:
+            name: configmap-nginx
+```
+
+2. Запустим манифест **Deployment**
+
+![deploy-nginx]()
+
+3. Написан манифест [ConfigMap]() для Nginx.
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-nginx
+  namespace: netology-2
+data:
+  index.html: |
+    <html>
+    <h1>Welcome</h1>
+    </br>
+    <h1>This is Netology Homework - The task №2</h1>
+    </html>
+```
+
+4. Запустим манифест **CongifMap**
+
+![configmap-nginx]()
