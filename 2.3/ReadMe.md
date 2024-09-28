@@ -68,7 +68,7 @@ data:
 
 2. Запустим манифест **ConfigMap**
 
-![]()
+![configmap](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.1.jpg)
 
 3. Написан манифест [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/deployment.nginx.multitool.netology.yml) для Nginx и Multitool. Привяжем к страницу из ConfigMap для nginx и порт для multitool
 
@@ -113,7 +113,7 @@ spec:
 
 4. Запустим манифест **Deployment**
 
-![]()
+![deploy](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.2.jpg)
 
 5. Написан манифест [Service NodePort](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/service.netology.yml), чтобы контейнеры были доступны вне сети кубера
 
@@ -141,3 +141,13 @@ spec:
 ```
 
 5. Запустим манифест **Service**
+
+![svc](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.3.jpg)
+
+6. Проверям через браузер nginx через заданный в svc порт 30000
+
+![nginx](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.4.jpg)
+
+7. Проверям через браузер multitool через заданный в svc порт 30001
+
+![multitool](https://github.com/SlavaZakariev/netology-kuber/blob/494a0301ebc6e4f2d1db58c270d988763a3803c5/2.3/resources/kub_2-8_1.5.jpg)
