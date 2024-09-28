@@ -235,7 +235,7 @@ metadata:
   resourceVersion: ""
 ```
 
-6. Написан манифест для [Ingress]()
+6. Написан манифест для [Ingress](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/ingress.https.netology.yml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -262,7 +262,7 @@ spec:
     secretName: secret-tls
 ```
 
-6. Написан манифест [Service]() для Nginx
+6. Написан манифест [Service](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/service.nginx.netology.yml) для Nginx
 
 ```yaml
 apiVersion: v1
@@ -282,6 +282,6 @@ spec:
     app: app-main
 ```
 
-6. Запустим манифесты **Deployment**, **ConfigMap**, **Ingress** и **Service**
+6. Запустим манифесты **ConfigMap**, **Deployment**, **Ingress** и **Service**
 
 ![pods]()
