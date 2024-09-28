@@ -284,4 +284,4 @@ spec:
 
 6. Запустим манифесты **ConfigMap**, **Deployment**, **Ingress** и **Service**
 
-![pods]()
+![pods](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/resources/kub_2-8_2.3.jpg)
