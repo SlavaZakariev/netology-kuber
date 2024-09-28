@@ -45,3 +45,27 @@
 3. Репозиторий должен содержать тексты манифестов или ссылки на них в файле README.md.
 
 ---
+
+### Решение 1
+
+1. Создадим манифест для [ConfigMap]() для начала
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-nginx-multitool
+  namespace: netology-2
+data:
+  HTTP-PORT: 8080
+  index.html: |
+    <html>
+    <h1>Welcome</h1>
+    </br>
+    <h1>This is Netology Homework - 22.8 Конфигурация приложений</h1>
+    </html>
+```
+
+2. Запустим манифест
+
+3. 
