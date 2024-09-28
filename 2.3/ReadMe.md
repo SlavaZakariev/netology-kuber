@@ -66,6 +66,51 @@ data:
     </html>
 ```
 
-2. Запустим манифест
+2. Запустим манифест ConfigMap
 
-3. 
+![]()
+
+3. Написан манифест [Deployment]() для Nginx и Multitool
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-nginx-multitool
+  namespace: netology-2
+  labels:
+    app: app-main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-main
+  template:
+    metadata:
+      labels:
+        app: app-main
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.5
+        volumeMounts:
+          - name: nginx-index-file
+            mountPath: /usr/share/nginx/html/
+      - name: multitool
+        image: wbitt/network-multitool
+        env:
+        - name: HTTP_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: configmap-nginx-multitool
+              key: HTTP-PORT
+
+      volumes:
+        - name: nginx-index-file
+          configMap:
+            name: configmap-nginx-multitool
+```
+
+4. Запустим манифест Deployment
+
+![]()
