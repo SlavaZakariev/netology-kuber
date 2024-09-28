@@ -114,3 +114,28 @@ spec:
 4. Запустим манифест Deployment
 
 ![]()
+
+5. Написан манифест [Service] так как в Deployment два контейнера
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-deployment
+  namespace: netology-2
+spec:
+  type: NodePort
+  ports:
+    - name: http-nginx
+      port:  80
+      nodePort: 3000
+      protocol: TCP
+      targetPort: 80
+    - name: http-app-multitool
+      port:  8080
+      nodePort: 3001
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: app-main
+```
