@@ -115,7 +115,7 @@ spec:
 
 ![]()
 
-5. Написан манифест [Service] так как в Deployment два контейнера
+5. Написан манифест [Service]() так как в Deployment два контейнера
 
 ```yaml
 apiVersion: v1
