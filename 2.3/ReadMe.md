@@ -201,7 +201,7 @@ data:
     <html>
     <h1>Welcome</h1>
     </br>
-    <h1>This is Netology Homework - The task №2</h1>
+    <h1>This is Netology Homework - The task number 2</h1>
     </html>
 ```
 
