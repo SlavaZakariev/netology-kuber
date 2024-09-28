@@ -286,6 +286,6 @@ spec:
 
 ![pods](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/resources/kub_2-8_2.3.jpg)
 
-7. Проверям доступность Nginx через браузер
+7. Проверям доступность **Nginx** через браузер по **https**
 
 ![cert](https://github.com/SlavaZakariev/netology-kuber/blob/f2e7839f56b8857abafac1ec5561025e93fc19dc/2.3/resources/kub_2-8_2.4.jpg)
