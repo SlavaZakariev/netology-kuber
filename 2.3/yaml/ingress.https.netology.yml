@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-https
+  namespace: netology-2
+spec:
+  rules:
+    - host: app-nginx.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: service-https
+                port:
+                  number: 80
+
+  tls:
+    - hosts:
+      - app-nginx.ru
+      secretName: secret-tls
