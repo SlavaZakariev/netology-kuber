@@ -128,12 +128,12 @@ spec:
   ports:
     - name: http-nginx
       port:  80
-      nodePort: 3000
+      nodePort: 30000
       protocol: TCP
       targetPort: 80
     - name: http-app-multitool
       port:  8080
-      nodePort: 3001
+      nodePort: 30001
       protocol: TCP
       targetPort: 8080
   selector:
