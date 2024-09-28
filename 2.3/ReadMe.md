@@ -154,8 +154,6 @@ spec:
 
 ---
 
----
-
 ### Решение 2
 
 1. Написан манифест для [Deployment](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.3/yaml/deployment.nginx.netology.yml) для Nginx
@@ -209,11 +207,11 @@ data:
 
 3. Создаём самоподписные сертификаты **tls.crt** и **tls.key** для домена app-nginx.ru на 1 год
 
-![cert]()
+![cert](https://github.com/SlavaZakariev/netology-kuber/blob/eebb47d07df7e50e362b7c1ca1362e622fcc52b5/2.3/resources/kub_2-8_2.1.jpg)
 
 4. Создаём secret и проверяем статус созданного объёкта в пространстве имён netology-2
 
-![secret]()
+![secret](https://github.com/SlavaZakariev/netology-kuber/blob/eebb47d07df7e50e362b7c1ca1362e622fcc52b5/2.3/resources/kub_2-8_2.2.jpg)
 
 5. Проверяем secret в формате yaml для проверки наличия ключей и даты создания
 
