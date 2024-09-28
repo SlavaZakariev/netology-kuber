@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-deployment
+  namespace: netology-2
+spec:
+  type: NodePort
+  ports:
+    - name: http-nginx
+      port:  80
+      nodePort: 30000
+      protocol: TCP
+      targetPort: 80
+    - name: http-app-multitool
+      port:  8080
+      nodePort: 30001
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: app-main
