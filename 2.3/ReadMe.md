@@ -282,6 +282,6 @@ spec:
     app: app-main
 ```
 
-6. Запустим манифесты **Deployment**, **ConfigMap**, **Ingress**, **Service**
+6. Запустим манифесты **Deployment**, **ConfigMap**, **Ingress** и **Service**
 
 ![pods]()
