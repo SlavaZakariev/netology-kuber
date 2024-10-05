@@ -107,7 +107,9 @@ spec:
       ports:
       - containerPort: 8080
 ```
-
+Доступа на создание пода в нашей роли не прописано, поэтому выдаётся ошибка. Созданим наш объект под администратором, чтобы у нас были записи в лог и можно было воспользоваться доступом проверка описания (describe) объекта.
 ![switch-user](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.8.jpg)
 
+9. Проверим наличие пода, зайдём в его лог, а также посмотрим его описание под пользователем **netology-context**
 
+![log](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.9.jpg)
