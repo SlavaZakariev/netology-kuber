@@ -59,7 +59,7 @@
 
 ![context](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.5.jpg)
 
-6. Включаем функцию RBAC на нашем microk8s и проверим его статус
+6. Включаем функцию **RBAC** на нашем **microk8s** и проверим его статус
 
 ![rbac](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.6.jpg)
 
