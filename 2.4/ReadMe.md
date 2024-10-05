@@ -12,7 +12,7 @@
 
 ### Инструменты / дополнительные материалы, которые пригодятся для выполнения задания
 
-1. [Описание](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) RBAC.
+1. [Описание RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 2. [Пользователи и авторизация RBAC в Kubernetes](https://habr.com/ru/company/flant/blog/470503/).
 3. [RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b).
 
@@ -37,3 +37,6 @@
 
 ---
 
+### Решение 1
+
+1. 
