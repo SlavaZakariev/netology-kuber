@@ -55,7 +55,7 @@
 
 ![ctl](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.4.jpg)
 
-5. Создаём контекс с именем **netology-context** и проверяем его наличие
+5. Создаём контекст с именем **netology-context** и проверяем его наличие
 
 ![context](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.5.jpg)
 
@@ -91,4 +91,23 @@ roleRef:
   name: pod-logs-describe
   apiGroup: rbac.authorization.k8s.io
 ```
-![role](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.7.jpg)
+![role-rolebinding](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.7.jpg)
+
+8. Переключимся на ранее созданного пользователя **netology-context** и попробуем запустить под [multitool](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.4/yaml/pod.multitool.yml)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multitool
+spec:
+  containers:
+   -  name: multitool
+      image: wbitt/network-multitool
+      ports:
+      - containerPort: 8080
+```
+
+![switch-user](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.8.jpg)
+
+
