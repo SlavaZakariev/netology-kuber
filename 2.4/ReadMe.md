@@ -63,6 +63,32 @@
 
 ![rbac](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.6.jpg)
 
-7. Создадим роль Role и привязку роли к субъекту RoleBinding
+7. Создадим роль [Role](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.4/yaml/role.netology.yml) и привязку роли к субъекту [RoleBinding](https://github.com/SlavaZakariev/netology-kuber/blob/main/2.4/yaml/rolebinding.netology.yml)
 
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-logs-describe
+  namespace: default
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/log"]
+    verbs: ["get", "watch", "list"]
+```
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-reader
+  namespace: default
+subjects:
+- kind: User
+  name: netology
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: pod-logs-describe
+  apiGroup: rbac.authorization.k8s.io
+```
 ![role](https://github.com/SlavaZakariev/netology-kuber/blob/9429a72bb7213e948bdca97c5b4640b0119386f0/2.4/resources/kub_2-9_1.7.jpg)
