@@ -49,6 +49,66 @@
 
 2. Создаём [helm-nginx](https://github.com/SlavaZakariev/netology-kuber/tree/main/2.5/helm-nginx)
 
+<details>
+
+<summary>Chart.yaml \ values.yaml \ templates\deployment.netology.yml \ templates\service.netology.yml</summary>
+
+```yaml
+apiVersion: v2
+name: netology
+
+type: application
+
+version: 1.0.0
+appVersion: 1.25.5
+```
+```yaml
+replicaCount: 1
+image: nginx
+port: 80
+```
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mainApp
+  labels:
+    app: main
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+        - name: nginx
+          image: "{{ .Values.image }}:{{ .Chart.appVersion }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: {{ .Values.port }}
+              protocol: TCP
+```
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mainApp
+  labels:
+    app: main
+spec:
+  ports:
+    - port: {{ .Values.port }}
+      name: http
+  selector:
+    app: main
+```
+</details>
+
 ![create](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_1.2.jpg)
 
 3. Удаляем созданные ресурсы
