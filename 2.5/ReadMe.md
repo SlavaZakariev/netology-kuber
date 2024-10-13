@@ -132,7 +132,7 @@ spec:
 
 ![app1-1](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.4.jpg)
 
-5. Добавляем ещё один **helm chart** с именем netology2, также в пространстве имён **app1**
+5. Добавляем ещё один **helm chart** с именем **netology2**, также в пространстве имён **app1**
 
 ![app1-2](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.5.jpg)
 
