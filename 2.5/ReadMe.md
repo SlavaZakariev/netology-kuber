@@ -116,7 +116,7 @@ spec:
 
 ### Решение 2
 
-1. Устанавливаем **helm chart** в под названием **netology-01**
+1. Устанавливаем **helm chart** под названием **netology-01**
 
 ![n-01](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_2.1.jpg)
 
@@ -127,3 +127,19 @@ spec:
 3. Удаляем объект **netology-01**
 
 ![uninstall-01](https://github.com/SlavaZakariev/netology-kuber/blob/d84a21fd05b82010033bdc06e243a3bf1a49ad48/2.5/resources/kub_2-10_2.3.jpg)
+
+4. Устанавливаем **helm chart** с именем **netology1** в пространство имён **app1** согласно условию
+
+![app1-1](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.4.jpg)
+
+5. Добавляем ещё один **helm chart** с именем netology2, также в пространстве имён **app1**
+
+![app1-2](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.5.jpg)
+
+6. Устанавливаем **helm chart** с именем **netology3** в пространство имён **app2** согласно условию
+
+![app1-1](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.6.jpg)
+
+7. Проверяем наличие наших чартов
+
+![app1-1](https://github.com/SlavaZakariev/netology-kuber/blob/9748cfd47857546ecfff524e0b78fdcdb498cc19/2.5/resources/kub_2-10_2.7.jpg)
