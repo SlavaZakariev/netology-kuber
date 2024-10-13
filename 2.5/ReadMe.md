@@ -47,11 +47,11 @@
 
 ![helm](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_1.1.jpg)
 
-2. Создаём [helm-nginx](https://github.com/SlavaZakariev/netology-kuber/tree/main/2.5/helm-nginx)
-
-<details>
-
-<summary>Chart.yaml \ values.yaml \ templates\deployment.netology.yml \ templates\service.netology.yml</summary>
+2. Подготавливаем манифесты
+   - Chart.yaml
+   - values.yaml
+   - templates\deployment.netology.yml
+   - templates\service.netology.yml
 
 ```yaml
 apiVersion: v2
@@ -107,7 +107,8 @@ spec:
   selector:
     app: main
 ```
-</details>
+
+3. Создаём [helm-nginx](https://github.com/SlavaZakariev/netology-kuber/tree/main/2.5/helm-nginx)
 
 ![create](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_1.2.jpg)
 
