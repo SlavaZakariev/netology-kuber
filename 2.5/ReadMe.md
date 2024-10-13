@@ -126,4 +126,4 @@ spec:
 
 3. Удаляем объект netology-01
 
-![uninstall-01](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_2.3.jpg)
+![uninstall-01](https://github.com/SlavaZakariev/netology-kuber/blob/d84a21fd05b82010033bdc06e243a3bf1a49ad48/2.5/resources/kub_2-10_2.3.jpg)
