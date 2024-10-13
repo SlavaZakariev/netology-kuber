@@ -39,3 +39,16 @@
 2. Файл README.md должен содержать скриншоты вывода необходимых команд `kubectl`, `helm`, а также скриншоты результатов.
 3. Репозиторий должен содержать тексты манифестов или ссылки на них в файле README.md.
 
+---
+
+### Решение 1
+
+1. Скачиваем и устанавливаем Helm
+
+![helm](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_1.1.jpg)
+
+2. 
+
+2. Создаём helm-nginx
+
+![create](https://github.com/SlavaZakariev/netology-kuber/blob/e0756dfb73b82bd4bc3d8a81d2a989b0966cdfff/2.5/resources/kub_2-10_1.2.jpg)
