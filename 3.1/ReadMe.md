@@ -67,7 +67,7 @@
 | Master Node1 | 2 ядра  | 4 ГБ  | 16 ГБ |
 | Master Node3 | 2 ядра  | 4 ГБ  | 16 ГБ |
 | Master Node3 | 2 ядра  | 4 ГБ  | 16 ГБ |
-| Worker Node1 | 10 ядра | 16 ГБ | 48 ГБ |
-| Worker Node2 | 10 ядра | 16 ГБ | 48 ГБ |
-| Worker Node3 | 10 ядра | 16 ГБ | 48 ГБ |
+| Worker Node1 | 10 ядра | 16 ГБ | 64 ГБ |
+| Worker Node2 | 10 ядра | 16 ГБ | 64 ГБ |
+| Worker Node3 | 10 ядра | 16 ГБ | 64 ГБ |
 
