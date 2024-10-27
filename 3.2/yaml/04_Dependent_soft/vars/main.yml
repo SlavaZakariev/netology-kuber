@@ -1,0 +1,5 @@
+pakages:
+  - curl
+  - ca-certificates
+  - apt-transport-https
+  - gnupg
