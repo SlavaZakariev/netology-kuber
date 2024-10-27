@@ -1,0 +1,9 @@
+---
+- name: Update cache # Обновление кэша менеджера пакетов apt
+  apt:
+    update_cache: yes
+
+- name: install dependencies # Установка необходимого софта
+  apt:
+    name: "{{pakages}}"
+    state: present
