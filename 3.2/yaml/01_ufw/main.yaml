@@ -1,1 +1,58 @@
-1
+- name: Enable UFW #включаем FireWall
+  community.general.ufw:
+    state: "enabled"
+
+- name: Allow ssh #включаем 22 порт для доступа по SSH
+  community.general.ufw:
+    rule: allow
+    port: 22
+    proto: tcp
+
+- name: Kubernetes API Server
+  community.general.ufw:
+    rule: allow
+    port: 6443
+    proto: tcp
+    comment: k8s API Server
+
+- name: etcd server client API
+  community.general.ufw:
+    rule: allow
+    port: 2379:2380
+    proto: tcp
+    comment: etcd
+
+- name: Kubelet API
+  community.general.ufw:
+    rule: allow
+    port: 10250
+    proto: tcp
+    comment: Kubelet API
+
+- name: Kube-scheduler
+  community.general.ufw:
+    rule: allow
+    port: 10259
+    proto: tcp
+    comment: k8s scheduler
+
+- name: Kube-controller-manager
+  community.general.ufw:
+    rule: allow
+    port: 10257
+    proto: tcp
+    comment: k8s controller-manager
+
+- name: Kube-proxy
+  community.general.ufw:
+    rule: allow
+    port: 10256
+    proto: tcp
+    comment: k8s proxy
+
+- name: Ports for k8s workers
+  community.general.ufw:
+    rule: allow
+    port: 30000:32767
+    proto: tcp
+    comment: k8s workers
