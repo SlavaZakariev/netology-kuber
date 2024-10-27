@@ -1,8 +1,8 @@
-- name: Enable UFW #включаем FireWall
+- name: Enable UFW # Включаем FireWall
   community.general.ufw:
     state: "enabled"
 
-- name: Allow ssh #включаем 22 порт для доступа по SSH
+- name: Allow ssh # Включаем 22 порт для доступа по SSH
   community.general.ufw:
     rule: allow
     port: 22
