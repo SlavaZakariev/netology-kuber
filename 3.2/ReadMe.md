@@ -48,10 +48,14 @@
 ### Решение 1
 
 1. Разворачиваем 6 ВМ
-   - Сервер Iaac - 1
+   - Сервер IaaC - 1
    - Мастер - 1
    - Воркер - 4
 
-  ![hv]()
+![hv](https://github.com/SlavaZakariev/netology-kuber/blob/f8173efd018be67b4410d0741375042d76f4c9e3/3.2/resources/kub_3-2_1.1.jpg)
 
-  
+2. На сервер IaaC устанавливаем Ansible и раскидываем на все узлы SSH, проверями связь с узлами
+
+![ping](https://github.com/SlavaZakariev/netology-kuber/blob/f8173efd018be67b4410d0741375042d76f4c9e3/3.2/resources/kub_3-2_1.2.jpg)
+
+
