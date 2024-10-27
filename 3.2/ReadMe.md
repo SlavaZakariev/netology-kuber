@@ -75,8 +75,8 @@
   - 04_Dependent_soft # Установка зависимостей
 ```
 
-- Настраиваем **FireWall** - [roles/01_ufw]()
-- Отключаем файл подкачки **Swapoff** - [roles/02_Swapoff]()
-- Настраиваем часовой пояс на узлах - [roles/03_Timezone]()
-- Устанавливаем необходимые зависимости - [roles/04_Dependent_soft]()
+- Настраиваем **FireWall** - [roles/01_ufw](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/01_ufw/main.yaml)
+- Отключаем файл подкачки **Swapoff** - [roles/02_Swapoff](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/02_Swapoff/main.yml)
+- Настраиваем часовой пояс на узлах - [roles/03_Timezone](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/03_Timezone/main.yml)
+- Устанавливаем необходимые зависимости - [roles/04_Dependent_soft](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/04_Dependent_soft/tasks/main.yml)
 
