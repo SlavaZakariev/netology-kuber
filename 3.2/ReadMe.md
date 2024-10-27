@@ -62,6 +62,19 @@
 ![ping](https://github.com/SlavaZakariev/netology-kuber/blob/f8173efd018be67b4410d0741375042d76f4c9e3/3.2/resources/kub_3-2_1.2.jpg)
 
 3. Подготавливаем с помощью Ansible узлы Мастер и Воркеры:
+
+```yaml
+---
+- name: pre-preparation of nodes before installation Kubernetes
+  hosts: "all_k8s"
+  become: yes
+  roles:
+  - 01_ufw            # Роль для FireWall
+  - 02_Swapoff        # Роль для отключения файла подкачки
+  - 03_Timezone       # Установка часового пояса МСК
+  - 04_Dependent_soft # Установка зависимостей
+```
+
 - Настраиваем **FireWall** - [roles/01_ufw]()
 - Отключаем файл подкачки **Swapoff** - [roles/02_Swapoff]()
 - Настраиваем часовой пояс на узлах - [roles/03_Timezone]()
