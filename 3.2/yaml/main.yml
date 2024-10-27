@@ -1,0 +1,9 @@
+---
+- name: pre-preparation of nodes before installation Kubernetes
+  hosts: "all_k8s"
+  become: yes
+  roles:
+  - 01_ufw            # Роль для FireWall
+  - 02_Swapoff        # Роль для отключения файла подкачки
+  - 03_Timezone       # Установка часового пояса МСК
+  - 04_Dependent_soft # Установка зависимостей
