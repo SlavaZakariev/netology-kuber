@@ -1,4 +1,0 @@
---- # Установка часового пояса
-- name: Set timezone
-  community.general.timezone:
-    name: Europe/Moscow
