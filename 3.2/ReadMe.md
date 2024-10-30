@@ -80,3 +80,125 @@
 - Настраиваем часовой пояс на узлах - [roles/03_Timezone](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/03_Timezone/main.yml)
 - Устанавливаем необходимые зависимости - [roles/04_Dependent_soft](https://github.com/SlavaZakariev/netology-kuber/blob/main/3.2/yaml/04_Dependent_soft/tasks/main.yml)
 
+<details>
+<summary>Результат выполнения сборника</summary>
+
+```yaml
+ansible@iaac:/opt/ansible/k8s$ ansible-playbook main.yml
+
+PLAY [pre-preparation of nodes before installation Kubernetes] **************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************
+ok: [master-01]
+ok: [worker-01]
+ok: [worker-02]
+ok: [worker-03]
+ok: [worker-04]
+
+TASK [01_ufw : Enable UFW] **************************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Allow ssh] ***************************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Kubernetes API Server] ***************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : etcd server client API] **************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Kubelet API] *************************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Kube-scheduler] **********************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Kube-controller-manager] *************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Kube-proxy] **************************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [01_ufw : Ports for k8s workers] ***************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [02_Swapoff : Disable SWAP (1/2)] **************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [02_Swapoff : Disable SWAP (2/2)] **************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [03_Timezone : Set timezone] *******************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [04_Dependent_soft : Update cache] *************************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+TASK [04_Dependent_soft : install dependencies] *****************************************************************************
+changed: [master-01]
+changed: [worker-01]
+changed: [worker-02]
+changed: [worker-03]
+changed: [worker-04]
+
+PLAY RECAP ******************************************************************************************************************
+master-01                  :ok=15   changed=13   unreachable=0   failed=0   skipped=0   rescued=0   ignored=0
+worker-01                  :ok=15   changed=13   unreachable=0   failed=0   skipped=0   rescued=0   ignored=0
+worker-02                  :ok=15   changed=13   unreachable=0   failed=0   skipped=0   rescued=0   ignored=0
+worker-03                  :ok=15   changed=13   unreachable=0   failed=0   skipped=0   rescued=0   ignored=0
+worker-04                  :ok=15   changed=13   unreachable=0   failed=0   skipped=0   rescued=0   ignored=0
+```
+   
+</details>
