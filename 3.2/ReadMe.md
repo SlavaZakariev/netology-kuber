@@ -202,3 +202,20 @@ worker-04                  :ok=15   changed=13   unreachable=0   failed=0   skip
 ```
    
 </details>
+
+4. Проверяем наличие python и pip
+
+![pip](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.3.jpg)
+
+5. Сконирем git к нам на ВМ IaaC
+
+![clone](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.4.jpg)
+
+6. Переходим в папку **kubespray** и устанавливаем рекомендации из файла **requirements.txt**
+
+![txt](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.5.jpg)
+
+7. Обновляем файл инвентаризации с помощью **inventory builder**
+
+![invent](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.6.jpg)
+
