@@ -219,7 +219,7 @@ worker-04                  :ok=15   changed=13   unreachable=0   failed=0   skip
 
 ![invent](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.6.jpg)
 
-8. Проверяем файл инвентаризации
+8. Проверяем сформированный файл инвентаризации по пути `~/kubespray/inventory/mycluster/hosts.yaml`
 
 ```yaml
 all:
@@ -264,3 +264,7 @@ all:
     calico_rr:
       hosts: {}
 ```
+
+9. Запускаем установку кластера Kubernetes
+
+
