@@ -268,6 +268,8 @@ all:
 9. Запускаем установку кластера Kubernetes \
 `ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml -v`
 
+![install](https://github.com/SlavaZakariev/netology-kuber/blob/d12f5a5ac73f7f7d5cf29d0233b03b1d35559829/3.2/resources/kub_3-2_1.7.jpg)
+
 
 
 
