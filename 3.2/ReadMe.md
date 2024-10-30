@@ -270,6 +270,14 @@ all:
 
 ![install](https://github.com/SlavaZakariev/netology-kuber/blob/d12f5a5ac73f7f7d5cf29d0233b03b1d35559829/3.2/resources/kub_3-2_1.7.jpg)
 
+10. Подключаемся на мастер, создаём папку в корне пользователя, копируем конфиг и меняем владельца для полного доступа
 
+![dir](https://github.com/SlavaZakariev/netology-kuber/blob/42ae0596c23ed5664f5fb644db5ba9d7570439a1/3.2/resources/kub_3-2_1.8.jpg)
 
+11. Проверяем все узлы кластера на целостность
 
+![nodes](https://github.com/SlavaZakariev/netology-kuber/blob/42ae0596c23ed5664f5fb644db5ba9d7570439a1/3.2/resources/kub_3-2_1.9.jpg)
+
+12. Проверяем статус всех подов кластера
+
+![podes](https://github.com/SlavaZakariev/netology-kuber/blob/42ae0596c23ed5664f5fb644db5ba9d7570439a1/3.2/resources/kub_3-2_1.10.jpg)
