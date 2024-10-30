@@ -57,7 +57,7 @@
 
 ![hv](https://github.com/SlavaZakariev/netology-kuber/blob/f8173efd018be67b4410d0741375042d76f4c9e3/3.2/resources/kub_3-2_1.1.jpg)
 
-2. На сервер IaaC устанавливаем Ansible и раскидываем на все узлы SSH, проверями связь с узлами
+2. На сервер IaaC устанавливаем Ansible и раскидываем на все узлы SSH, проверяем связь с узлами
 
 ![ping](https://github.com/SlavaZakariev/netology-kuber/blob/f8173efd018be67b4410d0741375042d76f4c9e3/3.2/resources/kub_3-2_1.2.jpg)
 
@@ -207,7 +207,7 @@ worker-04                  :ok=15   changed=13   unreachable=0   failed=0   skip
 
 ![pip](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.3.jpg)
 
-5. Сконирем git к нам на ВМ IaaC
+5. Клонируем git к нам на ВМ IaaC
 
 ![clone](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.4.jpg)
 
