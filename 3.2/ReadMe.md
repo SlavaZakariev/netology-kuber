@@ -265,6 +265,9 @@ all:
       hosts: {}
 ```
 
-9. Запускаем установку кластера Kubernetes
+9. Запускаем установку кластера Kubernetes \
+`ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml -v`
+
+
 
 
