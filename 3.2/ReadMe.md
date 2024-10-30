@@ -219,3 +219,48 @@ worker-04                  :ok=15   changed=13   unreachable=0   failed=0   skip
 
 ![invent](https://github.com/SlavaZakariev/netology-kuber/blob/3f6e3b5b76f6e44d064ad02531317c93a32029c0/3.2/resources/kub_3-2_1.6.jpg)
 
+8. Проверяем файл инвентаризации
+
+```yaml
+all:
+  hosts:
+    node1:
+      ansible_host: 192.168.0.50
+      ip: 192.168.0.50
+      access_ip: 192.168.0.50
+    node2:
+      ansible_host: 192.168.0.51
+      ip: 192.168.0.51
+      access_ip: 192.168.0.51
+    node3:
+      ansible_host: 192.168.0.52
+      ip: 192.168.0.52
+      access_ip: 192.168.0.52
+    node4:
+      ansible_host: 192.168.0.53
+      ip: 192.168.0.53
+      access_ip: 192.168.0.53
+    node5:
+      ansible_host: 192.168.0.54
+      ip: 192.168.0.54
+      access_ip: 192.168.0.54
+  children:
+    kube_control_plane:
+      hosts:
+        node1:
+    kube_node:
+      hosts:
+        node2:
+        node3:
+        node4:
+        node5:
+    etcd:
+      hosts:
+        node1:
+    k8s_cluster:
+      children:
+        kube_control_plane:
+        kube_node:
+    calico_rr:
+      hosts: {}
+```
